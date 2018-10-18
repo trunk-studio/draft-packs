@@ -3,8 +3,8 @@ pipeline {
         label "jenkins-nodejs"
     }
     environment {
-      ORG               = 'oakary'
-      APP_NAME          = 'react-app'
+      ORG               = 'REPLACE_ME_ORG'
+      APP_NAME          = 'REPLACE_ME_APP_NAME'
       CHARTMUSEUM_CREDS = credentials('jenkins-x-chartmuseum')
     }
     stages {
@@ -78,7 +78,7 @@ pipeline {
               // release the helm chart
               sh 'jx step helm release'
               // promote through all 'Auto' promotion Environments
-              sh 'jx promote -b --env ats-staging --timeout 1h --version \$(cat ../../VERSION)'
+              sh 'jx promote -b --env REPLACE_ME_APP_NAME-staging --timeout 1h --version \$(cat ../../VERSION)'
             }
           }
         }

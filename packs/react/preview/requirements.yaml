@@ -1,7 +1,7 @@
 
 dependencies:
-- alias: oakary-ats-server
-  name: oakary-ats-server
+- alias: api-server-name
+  name: api-server-name
   version: 0.x.x
   repository: https://chartmuseum.jx.k8s.trunksys.com  
 - alias: expose
@@ -13,5 +13,5 @@ dependencies:
   repository: https://chartmuseum.build.cd.jenkins-x.io
   version: 2.3.56
 - alias: preview
-  name: react-app
+  name: REPLACE_ME_APP_NAME
   repository: file://../react-app

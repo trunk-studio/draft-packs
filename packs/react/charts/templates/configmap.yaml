@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ template "fullname" . }}
+  labels:
+    app: {{ template "fullname" . }}
+    component: "slave"
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}"
+    release: {{ .Release.Name | quote }}
+data:
+  .env.production: |-
+    REACT_APP_PORT=4000
+    REACT_APP_API_SERVER={{ .Values.apiServiceProtocol }}://{{ .Values.apiServiceName }}.{{ .Release.Namespace }}.k8s.trunksys.com/
+    REACT_APP_API_ENDPOINT={{ .Values.apiServiceProtocol }}://{{ .Values.apiServiceName }}.{{ .Release.Namespace }}.k8s.trunksys.com/api

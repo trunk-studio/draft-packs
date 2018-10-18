@@ -16,5 +16,5 @@ else
 endif
 	echo "  version: $(PREVIEW_VERSION)" >> requirements.yaml
 	helm init --client-only
-	cd ../react-app && make build && cd -
+	cd ../REPLACE_ME_APP_NAME && make build && cd -
 	jx step helm build
