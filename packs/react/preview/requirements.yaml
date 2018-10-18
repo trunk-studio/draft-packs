@@ -1,9 +1,9 @@
 
 dependencies:
-- alias: api-server-name
-  name: api-server-name
-  version: 0.x.x
-  repository: https://chartmuseum.jx.k8s.trunksys.com  
+# - alias: api-server-name
+#   name: api-server-name
+#   version: 0.x.x
+#   repository: https://chartmuseum.jx.k8s.trunksys.com  
 - alias: expose
   name: exposecontroller
   repository: https://chartmuseum.build.cd.jenkins-x.io
